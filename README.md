@@ -1,1 +1,3 @@
-# Data cleaning and visualization project of cargo vessel manifest
+# Data cleaning and visualization project of a cargo vessel manifest
+
+#Introduction
