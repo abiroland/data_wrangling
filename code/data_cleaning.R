@@ -61,3 +61,7 @@ newdat3 <- newdat2 %>%
   ) %>%
   select(-order_id, -segment)
 
+newdat3 %>%
+  select(ship_mode) %>%
+  unique()
+
