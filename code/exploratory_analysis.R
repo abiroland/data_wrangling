@@ -159,3 +159,30 @@ p2 <- df %>%
 
 p1/p2
 
+df %>% 
+  group_by(new_segment, year) %>%
+  mutate(
+    avgprice = round(mean(prices),2)
+  ) %>%
+  ggplot(aes(
+    x = year, y = new_segment, 
+    fill = avgprice
+  )) +
+  geom_tile(aes(fill = avgprice), 
+            color = "white", lwd = 1)+
+  scale_fill_gradient2_tableau() +
+  geom_text(aes(label = avgprice), color = "white") +
+  theme_bw() +
+  labs(
+    title = "Client distribution by avergae price for each year",
+    x = "Year",
+    y = "Segment",
+  ) +
+  theme(
+    plot.title = element_text(
+      family = "Light 300",
+      face = "bold",
+      size = 15
+    )
+  )
+    
