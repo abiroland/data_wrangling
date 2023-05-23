@@ -174,9 +174,10 @@ df %>%
   geom_text(aes(label = avgprice), color = "white") +
   theme_bw() +
   labs(
-    title = "Client distribution by avergae price for each year",
+    title = "Client distribution by average price for each year",
     x = "Year",
     y = "Segment",
+    fill = "Average price"
   ) +
   theme(
     plot.title = element_text(
